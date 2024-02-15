@@ -2,7 +2,7 @@ function helloWorld() {
     return 'hello world';
 }
 
-function convertisseurTemperature(temperature, unite) {
+export function convertisseurTemperature(temperature, unite) {
     switch (unite) {
         case 'C':
             temperature = (temperature * 9 / 5) + 32;
@@ -17,4 +17,45 @@ function convertisseurTemperature(temperature, unite) {
     return temperature;
 }
 
-export default { helloWorld, convertisseurTemperature };
+export function realCalculator(valueA, valueB, operator) {
+    switch (operator) {
+        case '+':
+            result = valueA + valueB;
+            break;
+        case '-':
+            result = valueA - valueB;
+            break;
+        case '*':
+            result = valueA * valueB;
+            break;
+        case '/':
+            result = valueA / valueB;
+            break;
+        default:
+            result = 'Error, this operator is unknow';
+            break;
+    }
+    return result;
+}
+
+export function drunkCalculator(valueA, valueB, operator) {
+    switch (operator) {
+        case '+':
+            result = valueA + valueB + Math.random();
+            break;
+        case '-':
+            result = valueA + valueB - Math.random;
+            break;
+        case '*':
+            result = valueA + valueB * Math.random();
+            break;
+        case '/':
+            result = valueA + valueB / Math.random();
+            break;
+        default:
+            result = 'Error, this operator is unknow';
+            break;
+    }
+}
+
+export default helloWorld;
